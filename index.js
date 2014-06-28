@@ -1,14 +1,20 @@
-module.exports = {
-    protocol: 'oauth2',
-    auth: 'https://apps.andyet.com/oauth/authorize',
-    token: 'https://apps.andyet.com/oauth/access_token',
-    scope: [],
-    profile: function (credentials, params, get, callback) {
+module.exports = function (options) {
 
-        get('https://api.andbang.com/me', {}, function (response) {
+    options = options || {};
+    var apps = options.apps || 'https://apps.andyet.com';
+    var api = options.api || 'https://api.andbang.com';
 
-            credentials.profile = response;
-            callback();
-        });
-    }
+    return {
+        protocol: 'oauth2',
+        auth: apps + '/oauth/authorize',
+        token: apps + '/oauth/access_token',
+        profile: function (credentials, params, get, callback) {
+
+            get(api + '/me', null, function (response) {
+
+                credentials.profile = response;
+                callback();
+            });
+        }
+    };
 };
