@@ -1,6 +1,6 @@
 {
   "name": "bell-andyet",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "bell auth plugin for andyet",
   "main": "index.js",
   "scripts": {
