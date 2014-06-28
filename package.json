@@ -1,0 +1,28 @@
+{
+  "name": "bell-andyet",
+  "version": "0.0.0",
+  "description": "bell auth plugin for andyet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andyet/bell-andyet.git"
+  },
+  "keywords": [
+    "bell",
+    "andyet",
+    "auth"
+  ],
+  "author": "Nathan LaFreniere <quitlahok@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andyet/bell-andyet/issues"
+  },
+  "homepage": "https://github.com/andyet/bell-andyet",
+  "devDependencies": {
+    "jshint": "^2.5.1",
+    "precommit-hook": "^1.0.2"
+  }
+}
